@@ -22,6 +22,8 @@ public class LevelController : Singleton<LevelController>
             levels[currentLevel].SetActive(false);
             levels[currentLevel + 1].SetActive(true);
             currentLevel += 1;
+
+            player.transform.position = spawnPosition.transform.position;
         }
     }
 }
