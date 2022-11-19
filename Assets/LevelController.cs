@@ -17,8 +17,11 @@ public class LevelController : Singleton<LevelController>
 
     public void SetNextLevel()
     {
-        levels[currentLevel].SetActive(false);
-        levels[currentLevel + 1].SetActive(true);
-        currentLevel += 1;
+        if(levels.Length > currentLevel + 1) 
+        {
+            levels[currentLevel].SetActive(false);
+            levels[currentLevel + 1].SetActive(true);
+            currentLevel += 1;
+        }
     }
 }
