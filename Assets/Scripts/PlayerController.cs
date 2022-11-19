@@ -34,7 +34,8 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        Enemy = GameObject.FindGameObjectWithTag("Enemy");        
+        Enemy = GameObject.FindGameObjectWithTag("Enemy");    
+        
         if (Enemy != null && !Input.anyKey)
         {
             enemy = Enemy.transform;
